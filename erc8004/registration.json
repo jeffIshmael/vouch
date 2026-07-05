@@ -1,0 +1,85 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Vouch",
+  "description": "Vouch is an autonomous pre-payment trust oracle on GOAT Network. Other agents pay it via x402 to answer one question before money moves: should I send funds to this wallet? Vouch analyzes GOAT wallet activity — tenure, transaction volume and consistency, payment reliability (failed-transaction ratio), counterparty diversity, and sybil/burst patterns — and returns a 0-100 financial reputation score, a letter grade (AAA-D), and a machine-actionable APPROVE/REVIEW/DENY recommendation. Calling agents (payment agents, escrow agents, marketplaces, treasury bots) enforce the recommendation autonomously: humans set risk policy once, agents score, pay, and decide on every transaction. Every lookup settles as an x402 micropayment on GOAT Network, and thin-history wallets are flagged provisional rather than falsely trusted. Discovery via ERC-8004, MCP manifest, and A2A agent card at the .well-known endpoints below.",
+  "image": "https://your-vouch-host/vouch-agent.png",
+  "homepage": "https://your-vouch-host/",
+  "category": "agentic-payments,trust-oracle,wallet-scoring,payment-risk",
+  "tags": [
+    "financial_reputation",
+    "pre_payment_check",
+    "wallet_scoring",
+    "payment_risk",
+    "sybil_detection",
+    "counterparty_trust",
+    "kya",
+    "agentic_payments",
+    "escrow",
+    "goat_network",
+    "x402",
+    "erc-8004"
+  ],
+  "license": "MIT",
+  "documentation": "https://github.com/your-org/vouch",
+  "capabilities": [
+    "wallet_financial_scoring",
+    "pre_payment_gating",
+    "sybil_detection",
+    "payment_reliability_analysis",
+    "counterparty_diversity_analysis",
+    "volume_consistency_analysis",
+    "provisional_flagging",
+    "quick_binary_scoring",
+    "x402_metered_access"
+  ],
+  "services": [
+    {
+      "name": "x402",
+      "endpoint": "https://your-vouch-host/v1/score",
+      "version": "1.0.0",
+      "skills": ["wallet-scoring", "sybil-detection", "payment-risk"],
+      "domains": ["defi", "agentic-payments", "escrow"]
+    },
+    {
+      "name": "MCP",
+      "endpoint": "https://your-vouch-host/.well-known/mcp.json",
+      "version": "2025-06-18"
+    },
+    {
+      "name": "A2A",
+      "endpoint": "https://your-vouch-host/.well-known/agent-card.json",
+      "version": "0.3.0"
+    },
+    {
+      "name": "WEB",
+      "endpoint": "https://your-vouch-host/",
+      "version": "1.0.0"
+    },
+    {
+      "name": "OASF",
+      "skills": [
+        "wallet_financial_scoring/finance/risk_assessment",
+        "pre_payment_trust_check/finance/agentic_payments",
+        "sybil_detection/finance/fraud_prevention",
+        "counterparty_vetting/finance/escrow"
+      ],
+      "domains": [
+        "finance/payments/agentic_payments",
+        "finance/credit/credit_scoring",
+        "technology/blockchain/defi",
+        "technology/artificial_intelligence"
+      ],
+      "version": "0.8.0",
+      "endpoint": "https://github.com/agntcy/oasf/"
+    }
+  ],
+  "x402Support": true,
+  "active": true,
+  "registrations": [
+    {
+      "agentId": 0,
+      "agentRegistry": "eip155:48816:0x556089008Fc0a60cD09390Eca93477ca254A5522"
+    }
+  ],
+  "supportedTrust": ["reputation", "crypto-economic"]
+}

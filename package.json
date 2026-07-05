@@ -1,0 +1,30 @@
+{
+  "name": "vouch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vouch — pre-payment trust oracle for GOAT Network agents. x402-paid wallet reputation scoring with ERC-8004 identity.",
+  "type": "module",
+  "scripts": {
+    "server": "tsx server/index.ts",
+    "gatekeeper": "tsx agent/gatekeeper.ts",
+    "healthcheck": "tsx erc8004/scripts/healthcheck.ts",
+    "pin": "tsx erc8004/scripts/pin-registration.ts",
+    "register": "tsx erc8004/scripts/register.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.1.48",
+    "@langchain/google": "^0.1.12",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "langchain": "^1.4.2",
+    "viem": "^2.21.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
