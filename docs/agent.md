@@ -29,7 +29,7 @@ agent/
 | `<counterparty>` (arg 1) | address | required | Wallet about to be paid |
 | `[amountWei]` (arg 2) | wei string | `10000000000000` (0.00001 BTC) | Intended transfer amount |
 | `GATEKEEPER_PRIVATE_KEY` | hex key | required | Pays the x402 fee and executes the transfer (needs testnet3 gas) |
-| `VOUCH_URL` | URL | `http://localhost:4021` | Vouch server |
+| `VOUCH_URL` | URL | `https://vouch-8n14.onrender.com` | Vouch server |
 | `GATEKEEPER_MIN_SCORE` | number | `60` | Policy: minimum trust score (0–100) a wallet needs before funds are sent |
 | `GATEKEEPER_MAX_AMOUNT_WEI` | wei string | `100000000000000` (0.0001 BTC) | Policy: hard cap per transfer |
 | `GOOGLE_API_KEY` | string | unset | Optional — enables Gemini audit summaries |

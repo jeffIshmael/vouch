@@ -2,8 +2,8 @@
   "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
   "name": "Vouch",
   "description": "Vouch is an autonomous pre-payment trust oracle on GOAT Network. Other agents pay it via x402 to answer one question before money moves: should I send funds to this wallet? Vouch analyzes GOAT wallet activity — tenure, transaction volume and consistency, payment reliability (failed-transaction ratio), counterparty diversity, and sybil/burst patterns — and returns a 0-100 financial reputation score, a letter grade (AAA-D), and a machine-actionable APPROVE/REVIEW/DENY recommendation. Calling agents (payment agents, escrow agents, marketplaces, treasury bots) enforce the recommendation autonomously: humans set risk policy once, agents score, pay, and decide on every transaction. Every lookup settles as an x402 micropayment on GOAT Network, and thin-history wallets are flagged provisional rather than falsely trusted. Discovery via ERC-8004, MCP manifest, and A2A agent card at the .well-known endpoints below.",
-  "image": "https://your-vouch-host/vouch-agent.png",
-  "homepage": "https://your-vouch-host/",
+  "image": "https://vouch-8n14.onrender.com/vouch-agent.png",
+  "homepage": "https://vouch-8n14.onrender.com/",
   "category": "agentic-payments,trust-oracle,wallet-scoring,payment-risk",
   "tags": [
     "financial_reputation",
@@ -20,7 +20,7 @@
     "erc-8004"
   ],
   "license": "MIT",
-  "documentation": "https://github.com/your-org/vouch",
+  "documentation": "https://github.com/jeffIshmael/vouch",
   "capabilities": [
     "wallet_financial_scoring",
     "pre_payment_gating",
@@ -35,24 +35,24 @@
   "services": [
     {
       "name": "x402",
-      "endpoint": "https://your-vouch-host/v1/score",
+      "endpoint": "https://vouch-8n14.onrender.com/v1/score",
       "version": "1.0.0",
       "skills": ["wallet-scoring", "sybil-detection", "payment-risk"],
       "domains": ["defi", "agentic-payments", "escrow"]
     },
     {
       "name": "MCP",
-      "endpoint": "https://your-vouch-host/.well-known/mcp.json",
+      "endpoint": "https://vouch-8n14.onrender.com/.well-known/mcp.json",
       "version": "2025-06-18"
     },
     {
       "name": "A2A",
-      "endpoint": "https://your-vouch-host/.well-known/agent-card.json",
+      "endpoint": "https://vouch-8n14.onrender.com/.well-known/agent-card.json",
       "version": "0.3.0"
     },
     {
       "name": "WEB",
-      "endpoint": "https://your-vouch-host/",
+      "endpoint": "https://vouch-8n14.onrender.com/",
       "version": "1.0.0"
     },
     {

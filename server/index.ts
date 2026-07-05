@@ -15,6 +15,7 @@ const staticRegistration = JSON.parse(
 
 const app = express();
 app.use(express.json());
+app.use(express.static(join(__dirname, "..", "public")));
 
 let paidLookups = 0;
 const startedAt = new Date().toISOString();

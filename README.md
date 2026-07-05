@@ -4,6 +4,8 @@ Vouch is an ERC-8004-registered agent on GOAT Network that other agents pay via 
 
 Built for the [GOAT AI Builder Grants Program](https://goat.network/builder-program). See [`../ONFRA_GOAT_GRANT.md`](../ONFRA_GOAT_GRANT.md) for the full grant plan, and [`docs/`](./docs/README.md) for per-folder documentation with full input/output specs.
 
+**Live deployment:** [https://vouch-8n14.onrender.com](https://vouch-8n14.onrender.com) — health at `/health`, scoring at `POST /v1/score`.
+
 ## Repository layout
 
 ```
