@@ -9,13 +9,19 @@ import { scoreWallet } from "./engine/score.js";
 import { buildAgentCard, buildMcpManifest, buildRegistrationDocument } from "./well_known.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const publicDir = join(__dirname, "..", "public");
 const staticRegistration = JSON.parse(
   readFileSync(join(__dirname, "..", "erc8004", "registration.json"), "utf8"),
 );
 
 const app = express();
 app.use(express.json());
-app.use(express.static(join(__dirname, "..", "public")));
+app.use(express.static(publicDir));
+
+/** Agent logo — explicit route so ERC-8004 registries always resolve the image URL. */
+app.get("/vouch-agent.png", (_req, res) => {
+  res.type("png").sendFile(join(publicDir, "vouch-agent.png"));
+});
 
 let paidLookups = 0;
 const startedAt = new Date().toISOString();
