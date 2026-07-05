@@ -10,6 +10,7 @@
     "healthcheck": "tsx erc8004/scripts/healthcheck.ts",
     "pin": "tsx erc8004/scripts/pin-registration.ts",
     "register": "tsx erc8004/scripts/register.ts",
+    "set-agent-uri": "tsx erc8004/scripts/set-agent-uri.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
